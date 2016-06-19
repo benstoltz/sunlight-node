@@ -1,0 +1,21 @@
+{
+  "name": "sunlight-node",
+  "version": "0.0.1",
+  "description": "Node wrapper for various Sunlight Foundation APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "watch:test": "ava --watch"
+  },
+  "keywords": [
+    "sunlight-foundation"
+  ],
+  "author": "Ben Stoltz",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "bluebird": "^3.4.1",
+    "lodash": "^4.13.1",
+    "stampit": "^2.1.1"
+  }
+}
