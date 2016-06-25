@@ -1,6 +1,14 @@
-import { stampit } from 'stampit'
-import { congress } from './apis/congress'
+import stampit from 'stampit'
+// const stampit = require('stampit')
+// import { congress } from './apis/congress'
 
-const sf = stampit()
+const SF = stampit()
+  .init(function () {
+    const key = 'bob'
+    this.getKey = () => {
+      return key
+    }
+  })
 
-export sf
+console.log(SF())
+export default SF

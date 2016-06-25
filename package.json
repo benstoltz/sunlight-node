@@ -2,11 +2,8 @@
   "name": "sunlight-node",
   "version": "0.0.1",
   "description": "Node wrapper for various Sunlight Foundation APIs",
-  "main": "index.js",
-  "scripts": {
-    "test": "ava",
-    "watch:test": "ava --watch"
-  },
+  "main": "./dist/sf.umd.js",
+  "jsnext:main": "./dist/sf.es2015.js",
   "keywords": [
     "sunlight-foundation"
   ],
@@ -14,10 +11,24 @@
   "license": "ISC",
   "devDependencies": {
     "ava": "^0.15.2",
-    "bluebird": "^3.4.1",
     "lodash": "^4.13.1",
-    "stampit": "^2.1.1",
+    "rollup": "^0.33.0",
+    "rollup-plugin-json": "^2.0.1",
+    "rollup-plugin-node-resolve": "^1.7.1",
+    "rollup-plugin-uglify": "^1.0.1",
     "standard": "^7.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "stampit": "^2.1.1"
+  },
+  "scripts": {
+    "prebuild": "mkdirp dist",
+    "build": "rollup",
+    "test": "standard src/ && ava",
+    "watch:test": "ava --watch"
+  },
+  "ava": {
+    "require": ["babel-register"]
+  }
 }
