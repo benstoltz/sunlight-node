@@ -16,6 +16,8 @@
     "ava": "^0.15.2",
     "bluebird": "^3.4.1",
     "lodash": "^4.13.1",
-    "stampit": "^2.1.1"
-  }
+    "stampit": "^2.1.1",
+    "standard": "^7.1.2"
+  },
+  "dependencies": {}
 }
