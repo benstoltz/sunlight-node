@@ -1,4 +1,5 @@
 import stampit from 'stampit'
+import defaultStamp from '../../helpers/defaultStamp'
 
 const congress = stampit({
   methods: {
@@ -7,15 +8,6 @@ const congress = stampit({
     }
   }
 })
-  .init(function () {
-    const key = process.env.SF_SUNLIGHT_KEY || 'bob'
-    this.getKey = () => {
-      return key
-    }
-  }).init(function () {
-    this.holyCarp = () => {
-      return 'All the carps'
-    }
-  })
+.compose(defaultStamp)
 
 export default congress
