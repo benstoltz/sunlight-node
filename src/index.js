@@ -1,6 +1,6 @@
 import stampit from 'stampit'
 // const stampit = require('stampit')
-// import { congress } from './apis/congress'
+import congress from './apis/congress'
 
 const SF = stampit()
   .init(function () {
@@ -9,6 +9,10 @@ const SF = stampit()
       return key
     }
   })
+  .methods({
+    congress () {
+      return congress()
+    }
+  })
 
-console.log(SF())
 export default SF

@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "bluebird": "^3.4.1",
+    "dotenv": "^2.0.0",
     "stampit": "^2.1.1"
   },
   "scripts": {
@@ -29,6 +30,8 @@
     "watch:test": "ava --watch"
   },
   "ava": {
-    "require": ["babel-register"]
+    "require": [
+      "babel-register"
+    ]
   }
 }
