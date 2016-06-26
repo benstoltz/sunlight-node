@@ -1,10 +1,10 @@
 import stampit from 'stampit'
 import defaultStamp from './helpers/defaultStamp'
 import congress from './apis/congress'
-import capitolWords from './apis/capitol_words'
-import openStates from './apis/open_states'
-import politicalParty from './apis/political_party'
-import campaignFinance from './apis/campaign_finance'
+import capitolWords from './apis/capitolWords'
+import openStates from './apis/openStates'
+import politicalParty from './apis/politicalParty'
+import campaignFinance from './apis/campaignFinance'
 
 const SF = stampit()
   .methods({

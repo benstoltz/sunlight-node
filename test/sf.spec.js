@@ -1,12 +1,37 @@
 import test from 'ava'
 import SF from '../src/index'
 
-test('lets log some sf', t => {
+test('Returns default when no key is passed in', t => {
   const key = SF()
-  console.log(key)
-  console.log(key.congress().getLegislator('bob'))
-  console.log(key.congress().getLegislator('hi there'))
-  console.log(Object.getPrototypeOf(SF()))
-  console.log(key.congress().getKey())
   t.is(key.getKey(), 'default')
+})
+
+test('Returns input from key', t => {
+  const key = SF(null, {key: 'this is a key'})
+  t.is(key.getKey(), 'this is a key')
+})
+
+test('congress properly inherits key', t => {
+  const key = SF(null, {key: '1234567'})
+  t.is(key.congress().getKey(), '1234567')
+})
+
+test('capitolWords properly inherits key', t => {
+  const key = SF(null, {key: '1234567'})
+  t.is(key.capitolWords().getKey(), '1234567')
+})
+
+test('openStates properly inherits key', t => {
+  const key = SF(null, {key: '1234567'})
+  t.is(key.openStates().getKey(), '1234567')
+})
+
+test('politicalParty properly inherits key', t => {
+  const key = SF(null, {key: '1234567'})
+  t.is(key.politicalParty().getKey(), '1234567')
+})
+
+test('campaignFinance properly inherits key', t => {
+  const key = SF(null, {key: '1234567'})
+  t.is(key.campaignFinance().getKey(), '1234567')
 })
