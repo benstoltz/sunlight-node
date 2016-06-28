@@ -1,13 +1,14 @@
 import stampit from 'stampit'
 import defaultStamp from '../../helpers/defaultStamp'
+import {getLegislators} from './legislators'
 
 const congress = stampit({
   refs: {
-    url: `https://congress.api.sunlightfoundation.com/`
+    url: 'https://congress.api.sunlightfoundation.com/'
   },
   methods: {
-    getLegislator (value) {
-      return value
+    getLegislators () {
+      return getLegislators(this.url, this.getKey())
     }
   }
 })
