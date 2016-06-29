@@ -46,7 +46,7 @@ const SF = stampit()
   .methods({
     congress () {
       return congress(null, {key: this.getKey()})
-    },
+    }
     //
     // capitolWords () {
     //   return capitolWords(null, {key: this.getKey()})

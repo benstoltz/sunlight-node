@@ -1,6 +1,6 @@
 import rp from 'request-promise'
 
-export function getLegislators (url, key) {
+export function getAllLegislators (url, key) {
   const legislatorOptions = {
     url: url + `legislators?apikey=${key}`
   }
