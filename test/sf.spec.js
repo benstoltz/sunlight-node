@@ -35,3 +35,10 @@ test('campaignFinance properly inherits key', t => {
   const key = SF(null, {key: '1234567'})
   t.is(key.campaignFinance().getKey(), '1234567')
 })
+
+test('multiple isntances of sf', t => {
+  const sf1 = SF(null, {key: '1234'})
+  const sf2 = SF(null, {key: '5678'})
+  t.is(sf1.getKey(), '1234')
+  t.is(sf2.getKey(), '5678')
+})
