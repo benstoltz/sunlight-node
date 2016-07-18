@@ -10,5 +10,6 @@ test('real test', t => {
     .getAllLegislators()
     .then(result => {
       t.is(typeof result, 'object')
+      console.log(result)
     })
 })

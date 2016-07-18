@@ -1,10 +1,31 @@
 import rp from 'request-promise'
 
-export function getAllLegislators (url, key) {
+function getAllLegislators (url, key) {
   const legislatorOptions = {
-    url: url + `legislators?apikey=${key}`,
+    url: `${url}/legislators?per_page=all&apikey=${key}`,
     json: true
   }
-  console.log(legislatorOptions)
   return rp(legislatorOptions)
+}
+
+function fetchLegislator (url, key) {
+  const options = {
+    url: `${url}/legislators?per_page=all&apikey=${key}`,
+    json: true
+  }
+  return rp(options)
+}
+
+function fetchLegislatorByLocation (url, key) {
+  const options = {
+    url: `${url}/legislators?per_page=all&apikey=${key}`,
+    json: true
+  }
+  return rp(options)
+}
+
+export const legislators = {
+  getAllLegislators,
+  fetchLegislator,
+  fetchLegislatorByLocation
 }
